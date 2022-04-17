@@ -1,0 +1,24 @@
+[
+  {
+    "id": "builtin_image-gF3unA",
+    "formData": {
+      "typing$en": true,
+      "image$en": "/api/v1/bots/uxtoolsbot/media/o8odl4sv44bmdpagup9w-Screenshot%20from%202022-03-19%2016-51-40.png",
+      "title$en": "Ux criteria"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-03-19T19:52:26.393Z",
+    "modifiedOn": "2022-03-19T19:52:26.393Z"
+  },
+  {
+    "id": "builtin_image-wS1F1I",
+    "formData": {
+      "typing$en": true,
+      "image$en": "/api/v1/bots/uxtoolsbot/media/3dbx6con1pdmoe960qel-Screenshot%20from%202022-03-19%2016-54-45.png",
+      "title$en": "Ux criteria 2"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-03-19T19:55:39.734Z",
+    "modifiedOn": "2022-03-19T19:55:39.734Z"
+  }
+]

@@ -1,0 +1,225 @@
+[
+  {
+    "id": "builtin_single-choice-uLjn1R",
+    "formData": {
+      "dropdownPlaceholder$en": "Select...",
+      "choices$en": [
+        {
+          "title": "It involves the whole project",
+          "value": "Whole project"
+        },
+        {
+          "title": "It is specific to a feature",
+          "value": "Specific"
+        }
+      ],
+      "markdown$en": true,
+      "disableFreeText$en": true,
+      "typing$en": true,
+      "text$en": "Alright, and what about the UX Information of your project that you want to evidence, is it more general and involves the <b>whole project</b>? or more <b>specific to a feature</b>?",
+      "isDropdown$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-03-19T18:32:26.320Z",
+    "modifiedOn": "2022-04-17T21:25:38.033Z"
+  },
+  {
+    "id": "builtin_single-choice-csQ5oJ",
+    "formData": {
+      "dropdownPlaceholder$en": "Select...",
+      "choices$en": [
+        {
+          "title": "Yes",
+          "value": "Yes"
+        },
+        {
+          "title": "No",
+          "value": "No"
+        }
+      ],
+      "markdown$en": true,
+      "disableFreeText$en": false,
+      "typing$en": true,
+      "text$en": "Would you like to send a feedback about it?",
+      "isDropdown$en": false
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-03-20T21:53:41.731Z",
+    "modifiedOn": "2022-03-21T00:06:31.135Z"
+  },
+  {
+    "id": "builtin_single-choice-JMXqWe",
+    "formData": {
+      "dropdownPlaceholder$en": "Select...",
+      "choices$en": [
+        {
+          "title": "See it again.",
+          "value": "again"
+        },
+        {
+          "title": "Discover a new one.",
+          "value": "new one"
+        }
+      ],
+      "markdown$en": true,
+      "disableFreeText$en": false,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-03-20T21:59:15.349Z",
+    "modifiedOn": "2022-03-20T21:59:15.349Z"
+  },
+  {
+    "id": "builtin_single-choice-5uBaCz",
+    "formData": {
+      "dropdownPlaceholder$en": "Select...",
+      "choices$en": [
+        {
+          "title": "UX Requirements and Acceptance Criteria",
+          "value": "Acceptance Criteria"
+        },
+        {
+          "value": "Tasks",
+          "title": "Tasks"
+        }
+      ],
+      "markdown$en": true,
+      "disableFreeText$en": true,
+      "typing$en": true,
+      "text$en": "This information is more related to the <b>UX Requirements and Acceptance Criteria</b> inside the User Story or more related to the <b>UX Work</b> that needs to be accomplished by <b>tasks</b>?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-04-02T18:14:10.953Z",
+    "modifiedOn": "2022-04-17T21:25:19.929Z"
+  },
+  {
+    "id": "builtin_single-choice-07tAn2",
+    "formData": {
+      "dropdownPlaceholder$en": "Select...",
+      "choices$en": [
+        {
+          "title": "User Stories and Tasks",
+          "value": "User Stories and Tasks"
+        },
+        {
+          "title": "Documentation Repositories",
+          "value": "Documentation Repositories"
+        }
+      ],
+      "markdown$en": true,
+      "disableFreeText$en": true,
+      "typing$en": true,
+      "text$en": "The lack of evidence that you want to fulfill is more present in daily used artifacts, like <b>User Stories and Tasks</b>, or in <b>documentation repositories</b>?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-04-02T18:15:53.228Z",
+    "modifiedOn": "2022-04-17T21:25:31.951Z"
+  },
+  {
+    "id": "builtin_single-choice-zQ3NmL",
+    "formData": {
+      "dropdownPlaceholder$en": "Select...",
+      "choices$en": [
+        {
+          "title": "Yes",
+          "value": "Yes"
+        },
+        {
+          "title": "No",
+          "value": "No"
+        }
+      ],
+      "markdown$en": true,
+      "disableFreeText$en": false,
+      "typing$en": true,
+      "text$en": "Would you like to know more?",
+      "isDropdown$en": false
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-04-03T22:42:14.484Z",
+    "modifiedOn": "2022-04-03T22:42:14.484Z"
+  },
+  {
+    "id": "builtin_single-choice-HlPVxW",
+    "formData": {
+      "dropdownPlaceholder$en": "Select...",
+      "choices$en": [
+        {
+          "title": "Go to flow guide",
+          "value": "flow"
+        },
+        {
+          "title": "Choose a particular Design Pattern",
+          "value": "all"
+        }
+      ],
+      "markdown$en": true,
+      "disableFreeText$en": false,
+      "typing$en": true,
+      "text$en": "I recommend using our flow guide to discover the best Design Pattern for your project. But if you are already familiar with them, you can also choose one directly to learn more about it. ",
+      "isDropdown$en": false
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-04-15T15:43:24.720Z",
+    "modifiedOn": "2022-04-17T14:21:26.148Z"
+  },
+  {
+    "id": "builtin_single-choice-eKe3Oe",
+    "formData": {
+      "dropdownPlaceholder$en": "Select...",
+      "choices$en": [
+        {
+          "title": "UX Acceptance Criteria",
+          "value": "Acceptance Criteria"
+        },
+        {
+          "title": "UX tasks",
+          "value": "tasks"
+        },
+        {
+          "title": "Central UX Repository",
+          "value": "Central Repository"
+        },
+        {
+          "title": "UX Specific Repository",
+          "value": "Specific Repository"
+        },
+        {
+          "title": "UX Concern",
+          "value": "UX Concern"
+        }
+      ],
+      "markdown$en": true,
+      "disableFreeText$en": false,
+      "typing$en": true,
+      "text$en": "Which one would you like to know more about it?",
+      "isDropdown$en": false
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-04-15T15:54:55.578Z",
+    "modifiedOn": "2022-04-17T14:28:01.668Z"
+  },
+  {
+    "id": "builtin_single-choice-vbFWGM",
+    "formData": {
+      "dropdownPlaceholder$en": "Select...",
+      "choices$en": [
+        {
+          "title": "Go to {{user.lastdesign}}",
+          "value": "lastdesign"
+        },
+        {
+          "title": "Discover a new one",
+          "value": "new"
+        }
+      ],
+      "markdown$en": true,
+      "disableFreeText$en": false,
+      "typing$en": true,
+      "text$en": "Would you like to see it again or look for a new one?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-04-17T14:59:32.813Z",
+    "modifiedOn": "2022-04-17T14:59:32.813Z"
+  }
+]

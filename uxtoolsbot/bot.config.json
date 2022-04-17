@@ -1,0 +1,53 @@
+{
+  "locked": false,
+  "disabled": false,
+  "private": false,
+  "details": {},
+  "$schema": "../../bot.config.schema.json",
+  "description": "",
+  "active": true,
+  "version": "12.26.8",
+  "author": "Botpress, Inc.",
+  "license": "AGPL-3.0",
+  "imports": {
+    "modules": [],
+    "incomingMiddleware": [],
+    "outgoingMiddleware": [],
+    "contentTypes": [
+      "builtin_action-button",
+      "builtin_audio",
+      "builtin_card",
+      "builtin_carousel",
+      "dropdown",
+      "builtin_file",
+      "builtin_image",
+      "builtin_location",
+      "builtin_single-choice",
+      "builtin_text",
+      "builtin_video"
+    ]
+  },
+  "dialog": {
+    "timeoutInterval": "5m"
+  },
+  "logs": {
+    "expiration": "1 week"
+  },
+  "defaultLanguage": "en",
+  "languages": [
+    "en"
+  ],
+  "id": "uxtoolsbot",
+  "name": "Uxtoolsbot",
+  "pipeline_status": {
+    "current_stage": {
+      "id": "prod",
+      "promoted_on": "2022-03-19T14:31:44.794Z",
+      "promoted_by": "rafaeltoffoli4@gmail.com"
+    }
+  },
+  "messaging": {
+    "id": "a6735b67-1b5c-45a0-8c64-d604b828e0cc",
+    "token": "LEYCTWh7lVZyyHDiQ5GqXwxhUU1NioKAJCAh5xmpupL/Kn9kzN5Vd7tI+GetV2rtX+CrMU5tvvIjs5CBbvGw0Zbc"
+  }
+}

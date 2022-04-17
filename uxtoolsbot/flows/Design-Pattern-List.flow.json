@@ -1,0 +1,151 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "7105b9b5e5",
+      "name": "entry",
+      "onEnter": [],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-c451fa"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-c451fa",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-c451fa",
+      "flow": "skills/choice-c451fa.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Accepta...]",
+          "condition": "temp['skill-choice-ret-xijql8815b'] == \"Acceptance Criteria\"",
+          "node": "node-0428"
+        },
+        {
+          "caption": "User picked [tasks]",
+          "condition": "temp['skill-choice-ret-xijql8815b'] == \"tasks\"",
+          "node": "node-6af2"
+        },
+        {
+          "caption": "User picked [Central...]",
+          "condition": "temp['skill-choice-ret-xijql8815b'] == \"Central Repository\"",
+          "node": "node-bab1"
+        },
+        {
+          "caption": "User picked [Specifi...]",
+          "condition": "temp['skill-choice-ret-xijql8815b'] == \"Specific Repository\"",
+          "node": "node-46af"
+        },
+        {
+          "caption": "User picked [UX Conc...]",
+          "condition": "temp['skill-choice-ret-xijql8815b'] == \"UX Concern\"",
+          "node": "node-fe09"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "68542e4861",
+      "name": "node-0428",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-d2b4"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"lastdesign\",\"value\":\"UX Acceptance Criteria\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "511b1ea698",
+      "name": "node-46af",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-d2b4"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"lastdesign\",\"value\":\"Ux Specific Repository\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "31e5b6f94b",
+      "name": "node-bab1",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-d2b4"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"lastdesign\",\"value\":\"UX Central Repository\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "5ac5484109",
+      "name": "node-6af2",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-d2b4"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"lastdesign\",\"value\":\"UX Tasks\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "37163f81f0",
+      "name": "node-fe09",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-d2b4"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"lastdesign\",\"value\":\"UX Concern\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "9e9f955a16",
+      "name": "node-d2b4",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "Design-Pattern-Details.flow.json#entry"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

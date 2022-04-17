@@ -1,0 +1,108 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "xijql8815b",
+    "contentId": "builtin_single-choice-eKe3Oe",
+    "invalidContentId": "",
+    "keywords": {
+      "Acceptance Criteria": [
+        "Acceptance Criteria",
+        "UX Acceptance Criteria"
+      ],
+      "tasks": [
+        "tasks",
+        "UX tasks"
+      ],
+      "Central Repository": [
+        "Central Repository",
+        "Central UX Repository"
+      ],
+      "Specific Repository": [
+        "Specific Repository",
+        "UX Specific Repository"
+      ],
+      "UX Concern": [
+        "UX Concern"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false,
+      "variableName": ""
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-eKe3Oe {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "450394"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"xijql8815b\",\"contentId\":\"builtin_single-choice-eKe3Oe\",\"invalidContentId\":\"\",\"keywords\":{\"Acceptance Criteria\":[\"Acceptance Criteria\",\"UX Acceptance Criteria\"],\"tasks\":[\"tasks\",\"UX tasks\"],\"Central Repository\":[\"Central Repository\",\"Central UX Repository\"],\"Specific Repository\":[\"Specific Repository\",\"UX Specific Repository\"],\"UX Concern\":[\"UX Concern\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false,\"variableName\":\"\"}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-xijql8815b'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "275959"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"xijql8815b\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-xijql8815b']) > Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "694808"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "415611"
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "b5bb152618",
+      "name": "entry",
+      "onEnter": [],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "Design_info"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "da72329a49",
+      "name": "Design_info",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-d750"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-dqQXmM",
+        "say #!builtin_text-nk7t30",
+        "say #!builtin_text-B_6LK6"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "f2e5e3f197",
+      "name": "Context",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Execute_code"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"context\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "594be0ccfd",
+      "name": "Invalid",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-d750"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Dt2yG8"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "e984ce042f",
+      "name": "Execute_code",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-35c9"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "abfc354b56",
+      "name": "node-35c9",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-d750"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-llzfte"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "1c66ea44f0",
+      "name": "Bye",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-_gHvBd"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "3b5b6c4144",
+      "name": "node-d750",
+      "next": [
+        {
+          "condition": "event.preview === \"1\"",
+          "conditionType": "raw",
+          "node": "Context"
+        },
+        {
+          "condition": "event.preview === \"2\"",
+          "conditionType": "raw",
+          "node": "Application"
+        },
+        {
+          "condition": "event.preview === \"3\"",
+          "conditionType": "raw",
+          "node": "Consequences"
+        },
+        {
+          "condition": "event.preview === \"4\"",
+          "conditionType": "raw",
+          "node": "Similar"
+        },
+        {
+          "condition": "event.preview === \"5\"",
+          "conditionType": "raw",
+          "node": "Example"
+        },
+        {
+          "condition": "event.preview === \"0\"",
+          "conditionType": "raw",
+          "node": "Quit"
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "Invalid"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "9efc2a4f08",
+      "name": "Application",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Execute_code"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"application\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "b157ba9c4c",
+      "name": "Consequences",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Execute_code"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"consequences\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "e7354d1d8f",
+      "name": "Similar",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Execute_code"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"relatedPatterns\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "71ea2cf133",
+      "name": "Example",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Show_images"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"example\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "f60abef220",
+      "name": "Quit",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Bye"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"context\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "d527af0601",
+      "name": "Show_images",
+      "next": [
+        {
+          "condition": "user.lastdesign  === \"UX Acceptance Criteria\"",
+          "conditionType": "props",
+          "node": "img1"
+        },
+        {
+          "condition": "user.lastdesign  === \"UX Specific Repository\"",
+          "conditionType": "props",
+          "node": "img2"
+        },
+        {
+          "condition": "user.lastdesign  === \"UX Central Repository\"",
+          "conditionType": "props",
+          "node": "img3"
+        },
+        {
+          "condition": "user.lastdesign   === \"UX Tasks\"",
+          "conditionType": "props",
+          "node": "img4"
+        },
+        {
+          "condition": "user.lastdesign   === \"UX Concern\"",
+          "conditionType": "props",
+          "node": "img5"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-6rg0L7"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "a0f141d9ec",
+      "name": "img1",
+      "next": [
+        {
+          "condition": "true",
+          "node": "End_img"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "dba37f9801",
+      "name": "img3",
+      "next": [
+        {
+          "condition": "true",
+          "node": "End_img"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "f254096c27",
+      "name": "img4",
+      "next": [
+        {
+          "condition": "true",
+          "node": "End_img"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "32ba7ea230",
+      "name": "img2",
+      "next": [
+        {
+          "condition": "true",
+          "node": "End_img"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "2743fd2791",
+      "name": "img5",
+      "next": [
+        {
+          "condition": "true",
+          "node": "End_img"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "2d825dd090",
+      "name": "End_img",
+      "next": [
+        {
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

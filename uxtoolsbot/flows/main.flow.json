@@ -1,0 +1,258 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": [
+      {
+        "condition": "event.nlu.intent.name === 'return'",
+        "conditionType": "intent",
+        "node": "#"
+      }
+    ]
+  },
+  "startNode": "Greet_if_needed",
+  "nodes": [
+    {
+      "id": "entry",
+      "name": "Greet_if_needed",
+      "next": [
+        {
+          "condition": "session.greeted === \"true\"",
+          "conditionType": "props",
+          "node": "start_conversation"
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "Greet"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null
+    },
+    {
+      "id": "e7f255e392",
+      "name": "Greet",
+      "next": [
+        {
+          "condition": "true",
+          "node": "get_name"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"greeted\",\"value\":\"true\"}",
+        "say #!builtin_text-RGYYie",
+        "builtin/wait {\"delay\":\"1000\"}",
+        "say #!builtin_text-kJLRMT",
+        "say #!builtin_text-_bGU1F",
+        "builtin/wait {\"delay\":\"500\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "2f4f7febb5",
+      "name": "start_conversation",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Last_section"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-eufJSQ"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "29de56faef",
+      "name": "path_to_ux_acceptance_criteria",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-a29fd6"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-SO4zYA",
+        "say #!builtin_text-pe9fcQ"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "970c3cd439",
+      "name": "get_name",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Name_teste"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"name\",\"value\":\"{{event.preview}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "3057f33790",
+      "name": "go_to_designs",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "Design-pattern-flow.flow.json#entry"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"lastAction\",\"value\":\"flow\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "35514ce26b",
+      "name": "Name_teste",
+      "next": [
+        {
+          "condition": "true",
+          "node": "path_to_ux_acceptance_criteria"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-mGn0XP"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "81ab29b895",
+      "name": "Last_section",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "choice-fda84a"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-m3MS2Y"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-205b00",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-205b00",
+      "flow": "skills/choice-205b00.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Yes]",
+          "condition": "temp['skill-choice-ret-wapup7moko'] == \"Yes\"",
+          "conditionType": "raw",
+          "node": "Feedback.flow.json#entry"
+        },
+        {
+          "caption": "User picked [No]",
+          "condition": "temp['skill-choice-ret-wapup7moko'] == \"No\"",
+          "node": ""
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "d44b063827",
+      "name": "anyway",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-a29fd6"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-cU8cj0"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "1b5b8ba102",
+      "name": "go_to_listing",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "Design-Pattern-List.flow.json#entry"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"lastAction\",\"value\":\"list\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-a29fd6",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-a29fd6",
+      "flow": "skills/choice-a29fd6.flow.json",
+      "next": [
+        {
+          "caption": "User picked [flow]",
+          "condition": "temp['skill-choice-ret-n4svpdztv4'] == \"flow\"",
+          "node": "go_to_designs"
+        },
+        {
+          "caption": "User picked [all]",
+          "condition": "temp['skill-choice-ret-n4svpdztv4'] == \"all\"",
+          "node": "go_to_listing"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "skill-fda84a",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-fda84a",
+      "flow": "skills/choice-fda84a.flow.json",
+      "next": [
+        {
+          "caption": "User picked [lastdes...]",
+          "condition": "temp['skill-choice-ret-4pxnmh0dlw'] == \"lastdesign\"",
+          "conditionType": "raw",
+          "node": "Design-Pattern-Details.flow.json#entry"
+        },
+        {
+          "caption": "User picked [new]",
+          "condition": "temp['skill-choice-ret-4pxnmh0dlw'] == \"new\"",
+          "node": "anyway"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    }
+  ]
+}

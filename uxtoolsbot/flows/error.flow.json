@@ -1,0 +1,35 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "3rr0r",
+      "name": "entry",
+      "onEnter": [],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "id": "87f7d64012",
+      "name": "NOT_IMPLEMENTED",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-lAzbgM"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

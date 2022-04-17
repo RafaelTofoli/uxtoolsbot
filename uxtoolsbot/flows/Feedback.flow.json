@@ -1,0 +1,38 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "b7f702bb65",
+      "name": "entry",
+      "onEnter": [],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "ask_feedback"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "5dd70b4227",
+      "name": "ask_feedback",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json#anyway"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-mkCcy5",
+        "say #!builtin_text-MOyt3K"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "op6",
+  "utterances": {
+    "en": [
+      "6",
+      "6 6",
+      "6"
+    ]
+  },
+  "slots": [],
+  "contexts": [
+    "global"
+  ]
+}

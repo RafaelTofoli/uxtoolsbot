@@ -1,0 +1,21 @@
+{
+  "name": "user-story",
+  "utterances": {
+    "en": [
+      "User Stories",
+      "Like User Stories",
+      "US",
+      "I think US",
+      "Usr Stores",
+      "UUser Sssters",
+      "User Story",
+      "User",
+      "Story",
+      "Stories"
+    ]
+  },
+  "slots": [],
+  "contexts": [
+    "global"
+  ]
+}

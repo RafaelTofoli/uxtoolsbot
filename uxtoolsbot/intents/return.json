@@ -1,0 +1,16 @@
+{
+  "name": "return",
+  "utterances": {
+    "en": [
+      "Return",
+      "return",
+      "restart",
+      "Restart",
+      "retrn"
+    ]
+  },
+  "slots": [],
+  "contexts": [
+    "global"
+  ]
+}

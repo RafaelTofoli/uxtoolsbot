@@ -16,12 +16,12 @@
       "markdown$en": true,
       "disableFreeText$en": true,
       "typing$en": true,
-      "text$en": "Alright, and what about the UX Information of your project that you want to evidence, is it more general and involves the <b>whole project</b>? or more <b>specific to a feature</b>?",
+      "text$en": "Alright, and what about the UX Information of your project that you want to evidence, is it more general and involves the whole project? Or more specific to a feature?",
       "isDropdown$en": true
     },
     "createdBy": "admin",
     "createdOn": "2022-03-19T18:32:26.320Z",
-    "modifiedOn": "2022-04-17T21:25:38.033Z"
+    "modifiedOn": "2022-04-18T12:29:53.489Z"
   },
   {
     "id": "builtin_single-choice-csQ5oJ",
@@ -173,7 +173,7 @@
           "value": "Acceptance Criteria"
         },
         {
-          "title": "UX tasks",
+          "title": "UX Tasks",
           "value": "tasks"
         },
         {
@@ -197,7 +197,7 @@
     },
     "createdBy": "admin",
     "createdOn": "2022-04-15T15:54:55.578Z",
-    "modifiedOn": "2022-04-17T14:28:01.668Z"
+    "modifiedOn": "2022-04-18T12:26:53.827Z"
   },
   {
     "id": "builtin_single-choice-vbFWGM",
@@ -205,7 +205,7 @@
       "dropdownPlaceholder$en": "Select...",
       "choices$en": [
         {
-          "title": "Go to {{user.lastdesign}}",
+          "title": "Go to the {{user.lastdesign}} Design Pattern",
           "value": "lastdesign"
         },
         {
@@ -220,6 +220,6 @@
     },
     "createdBy": "admin",
     "createdOn": "2022-04-17T14:59:32.813Z",
-    "modifiedOn": "2022-04-17T14:59:32.813Z"
+    "modifiedOn": "2022-04-17T22:33:39.037Z"
   }
 ]

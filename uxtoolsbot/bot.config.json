@@ -2,7 +2,15 @@
   "locked": false,
   "disabled": false,
   "private": false,
-  "details": {},
+  "details": {
+    "website": "",
+    "phoneNumber": "",
+    "emailAddress": "",
+    "termsConditions": "",
+    "privacyPolicy": "",
+    "avatarUrl": "/api/v1/bots/uxtoolsbot/media/0dnbo03hyhgba72a72r6-unknown.png",
+    "coverPictureUrl": ""
+  },
   "$schema": "../../bot.config.schema.json",
   "description": "",
   "active": true,

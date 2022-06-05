@@ -83,7 +83,7 @@
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"user\",\"name\":\"lastdesign\",\"value\":\"Ux Specific Repository\"}"
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"lastdesign\",\"value\":\"UX Specific Repository\"}"
       ],
       "onReceive": null,
       "type": "standard"

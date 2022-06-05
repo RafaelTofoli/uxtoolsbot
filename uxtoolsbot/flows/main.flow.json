@@ -4,9 +4,9 @@
     "onReceive": [],
     "next": [
       {
-        "condition": "event.nlu.intent.name === 'return'",
+        "condition": "event.nlu.intent.name === 'reset-name'",
         "conditionType": "intent",
-        "node": "#"
+        "node": "get_name"
       }
     ]
   },
@@ -44,7 +44,6 @@
         "say #!builtin_text-RGYYie",
         "builtin/wait {\"delay\":\"1000\"}",
         "say #!builtin_text-kJLRMT",
-        "say #!builtin_text-_bGU1F",
         "builtin/wait {\"delay\":\"500\"}"
       ],
       "onReceive": null,
@@ -82,28 +81,13 @@
       "type": "standard"
     },
     {
-      "id": "970c3cd439",
-      "name": "get_name",
-      "next": [
-        {
-          "condition": "true",
-          "node": "Name_teste"
-        }
-      ],
-      "onEnter": [],
-      "onReceive": [
-        "builtin/setVariable {\"type\":\"user\",\"name\":\"name\",\"value\":\"{{event.preview}}\"}"
-      ],
-      "type": "standard"
-    },
-    {
       "id": "3057f33790",
       "name": "go_to_designs",
       "next": [
         {
           "condition": "true",
           "conditionType": "always",
-          "node": "Design-pattern-flow.flow.json#entry"
+          "node": "Design-Pattern-flow.flow.json#entry"
         }
       ],
       "onEnter": [
@@ -237,7 +221,6 @@
         {
           "caption": "User picked [lastdes...]",
           "condition": "temp['skill-choice-ret-4pxnmh0dlw'] == \"lastdesign\"",
-          "conditionType": "raw",
           "node": "Design-Pattern-Details.flow.json#entry"
         },
         {
@@ -253,6 +236,23 @@
       ],
       "onEnter": null,
       "onReceive": null
+    },
+    {
+      "id": "970c3cd439",
+      "name": "get_name",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Name_teste"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-_bGU1F"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"name\",\"value\":\"{{event.preview}}\"}"
+      ],
+      "type": "standard"
     }
   ]
 }

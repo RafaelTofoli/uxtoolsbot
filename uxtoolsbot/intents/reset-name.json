@@ -1,0 +1,19 @@
+{
+  "name": "reset-name",
+  "utterances": {
+    "en": [
+      "Reset name",
+      "Redo name",
+      "Correct name",
+      "Restart name",
+      "new name",
+      "name reset",
+      "name restart",
+      "name correction"
+    ]
+  },
+  "slots": [],
+  "contexts": [
+    "global"
+  ]
+}

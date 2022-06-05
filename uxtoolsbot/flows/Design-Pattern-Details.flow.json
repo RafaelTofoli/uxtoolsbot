@@ -44,7 +44,7 @@
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"context\"}"
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"prop\",\"value\":\"context\"}"
       ],
       "onReceive": null,
       "type": "standard"
@@ -73,7 +73,9 @@
           "node": "node-35c9"
         }
       ],
-      "onEnter": [],
+      "onEnter": [
+        "getProps {\"pattern\":\"{{user.lastdesign}}\",\"prop\":\"{{user.prop}}\"}"
+      ],
       "onReceive": null,
       "type": "standard"
     },
@@ -162,7 +164,7 @@
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"application\"}"
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"prop\",\"value\":\"application\"}"
       ],
       "onReceive": null,
       "type": "standard"
@@ -177,7 +179,7 @@
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"consequences\"}"
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"prop\",\"value\":\"consequences\"}"
       ],
       "onReceive": null,
       "type": "standard"
@@ -192,7 +194,7 @@
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"relatedPatterns\"}"
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"prop\",\"value\":\"relatedPatterns\"}"
       ],
       "onReceive": null,
       "type": "standard"
@@ -222,7 +224,7 @@
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"user\",\"name\":\"Prop\",\"value\":\"context\"}"
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"prop\",\"value\":\"context\"}"
       ],
       "onReceive": null,
       "type": "standard"
@@ -257,9 +259,7 @@
           "node": "img5"
         }
       ],
-      "onEnter": [
-        "say #!builtin_text-6rg0L7"
-      ],
+      "onEnter": [],
       "onReceive": null,
       "type": "standard"
     },
@@ -272,30 +272,20 @@
           "node": "End_img"
         }
       ],
-      "onEnter": [],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
-      "id": "dba37f9801",
-      "name": "img3",
-      "next": [
-        {
-          "condition": "true",
-          "node": "End_img"
-        }
+      "onEnter": [
+        "say #!builtin_text-2BKOgV",
+        "say #!builtin_image-wDmOGJ"
       ],
-      "onEnter": [],
       "onReceive": null,
       "type": "standard"
     },
     {
-      "id": "f254096c27",
-      "name": "img4",
+      "id": "2d825dd090",
+      "name": "End_img",
       "next": [
         {
           "condition": "true",
-          "node": "End_img"
+          "node": "node-35c9"
         }
       ],
       "onEnter": [],
@@ -311,7 +301,26 @@
           "node": "End_img"
         }
       ],
-      "onEnter": [],
+      "onEnter": [
+        "say #!builtin_text-2BKOgV",
+        "say #!builtin_image-iDlfki"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "dba37f9801",
+      "name": "img3",
+      "next": [
+        {
+          "condition": "true",
+          "node": "End_img"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-2BKOgV",
+        "say #!builtin_image-X7ntCX"
+      ],
       "onReceive": null,
       "type": "standard"
     },
@@ -324,20 +333,26 @@
           "node": "End_img"
         }
       ],
-      "onEnter": [],
+      "onEnter": [
+        "say #!builtin_text-2BKOgV",
+        "say #!builtin_image-DBFMMc"
+      ],
       "onReceive": null,
       "type": "standard"
     },
     {
-      "id": "2d825dd090",
-      "name": "End_img",
+      "id": "f254096c27",
+      "name": "img4",
       "next": [
         {
           "condition": "true",
-          "node": ""
+          "node": "End_img"
         }
       ],
-      "onEnter": [],
+      "onEnter": [
+        "say #!builtin_text-2BKOgV",
+        "say #!builtin_image-z7p8EW"
+      ],
       "onReceive": null,
       "type": "standard"
     }
